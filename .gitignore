@@ -1,0 +1,9 @@
+/target
+/data
+/models/*.bin
+.env
+.ipynb_checkpoints/
+CLAUDE.md
+GEMINI.md 
+AGENTS.md 
+PRD.md
