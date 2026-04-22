@@ -1,14 +1,17 @@
-pub fn add(left: u64, right: u64) -> u64 {
-    left + right
-}
+//! Binance WebSocket feed client and message types.
+//!
+//! Subscribes to depth diff and trade streams, parses messages, and emits
+//! typed events downstream. Also provides a REST client for fetching the
+//! initial order book snapshot.
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+#![deny(unsafe_code)]
 
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
-}
+pub mod error;
+pub mod messages;
+pub mod rest;
+pub mod ws;
+
+pub use error::{FeedError, Result};
+pub use messages::{DepthUpdate, MarketEvent, PriceLevel, SnapshotResponse, Trade};
+pub use rest::fetch_snapshot;
+pub use ws::run_feed;

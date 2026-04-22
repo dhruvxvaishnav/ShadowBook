@@ -1,21 +1,51 @@
 [workspace]
 resolver = "2"
-members = ["crates/*"]
+members = ["crates/feed", "crates/book", "crates/recorder"]
 
 [workspace.package]
 edition = "2021"
 rust-version = "1.75"
 license = "MIT"
+authors = ["Your Name"]
 
 [workspace.dependencies]
+# Async
 tokio = { version = "1", features = ["full"] }
 tokio-tungstenite = { version = "0.24", features = ["native-tls"] }
+futures-util = "0.3"
+
+# Serde
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
-simd-json = "0.14"
-tracing = "0.1"
-tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# HTTP (for REST snapshot)
+reqwest = { version = "0.12", features = ["json", "rustls-tls"], default-features = false }
+
+# Errors & logging
 thiserror = "1"
 anyhow = "1"
-ordered-float = "4"
-hdrhistogram = "7"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# Data structures
+ordered-float = { version = "4", features = ["serde"] }
+
+# Time
+chrono = { version = "0.4", features = ["serde"] }
+
+# Parquet
+arrow = "53"
+parquet = "53"
+
+# Testing
+proptest = "1"
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1
+debug = true  # keep symbols for flamegraphs
+
+[profile.bench]
+opt-level = 3
+lto = "thin"

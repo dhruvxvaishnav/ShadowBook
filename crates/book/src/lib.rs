@@ -1,14 +1,12 @@
-pub fn add(left: u64, right: u64) -> u64 {
-    left + right
-}
+//! L2 order book reconstruction from Binance depth diffs.
+//!
+//! Implements the synchronization protocol:
+//! <https://developers.binance.com/docs/binance-spot-api-docs/web-socket-streams#how-to-manage-a-local-order-book-correctly>
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+#![deny(unsafe_code)]
 
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
-}
+pub mod error;
+pub mod orderbook;
+
+pub use error::{BookError, Result};
+pub use orderbook::{BookState, OrderBook};
