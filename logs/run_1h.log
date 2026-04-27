@@ -1,0 +1,94 @@
+   Compiling recorder v0.1.0 (/Users/dhruvxvaishnav/Desktop/shadowbook/crates/recorder)
+    Finished `release` profile [optimized + debuginfo] target(s) in 40.58s
+     Running `target/release/recorder`
+[2m2026-04-26T14:00:02.416892Z[0m [32m INFO[0m [2mrecorder[0m[2m:[0m starting recorder [3mevents_path[0m[2m=[0m"data/events_20260426_140002.parquet" [3msnaps_path[0m[2m=[0m"data/book_20260426_140002.parquet"
+[2m2026-04-26T14:00:02.417135Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m connecting to binance ws [3murl[0m[2m=[0mwss://stream.binance.com:9443/stream?streams=btcusdt@depth@100ms/btcusdt@trade
+[2m2026-04-26T14:00:03.205247Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m websocket connected
+[2m2026-04-26T14:00:22.419369Z[0m [32m INFO[0m [2mfeed::rest[0m[2m:[0m fetching snapshot [3msymbol[0m[2m=[0m"BTCUSDT" [3mlimit[0m[2m=[0m1000
+[2m2026-04-26T14:00:22.748622Z[0m [32m INFO[0m [2mfeed::rest[0m[2m:[0m snapshot received [3mlast_update_id[0m[2m=[0m92706133429 [3mbids[0m[2m=[0m1000 [3masks[0m[2m=[0m1000
+[2m2026-04-26T14:00:22.749601Z[0m [32m INFO[0m [2mrecorder::event_writer[0m[2m:[0m event writer opened [3mpath[0m[2m=[0m"data/events_20260426_140002.parquet"
+[2m2026-04-26T14:00:22.752541Z[0m [32m INFO[0m [2mrecorder[0m[2m:[0m pre-snapshot diffs buffered [3mdrained[0m[2m=[0m195
+[2m2026-04-26T14:00:22.752748Z[0m [32m INFO[0m [2mbook::orderbook[0m[2m:[0m snapshot applied [3mlast_update_id[0m[2m=[0m92706133429 [3mbids[0m[2m=[0m1000 [3masks[0m[2m=[0m1000
+[2m2026-04-26T14:00:22.752797Z[0m [32m INFO[0m [2mbook::orderbook[0m[2m:[0m replayed buffered diffs [3mapplied[0m[2m=[0m0 [3mskipped[0m[2m=[0m195
+[2m2026-04-26T14:00:57.470947Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m543 [3mtrade_count[0m[2m=[0m457 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:01:55.373128Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m1122 [3mtrade_count[0m[2m=[0m878 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:02:51.219195Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m1680 [3mtrade_count[0m[2m=[0m1320 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:04:14.171827Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m2510 [3mtrade_count[0m[2m=[0m1490 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:05:32.972348Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m3298 [3mtrade_count[0m[2m=[0m1702 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:06:10.119537Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m3669 [3mtrade_count[0m[2m=[0m2331 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:06:42.475261Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m3993 [3mtrade_count[0m[2m=[0m3007 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:07:19.570839Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m4364 [3mtrade_count[0m[2m=[0m3636 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:08:03.788881Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m4778 [3mtrade_count[0m[2m=[0m4222 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:08:54.048167Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m5308 [3mtrade_count[0m[2m=[0m4692 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:09:36.755108Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m5735 [3mtrade_count[0m[2m=[0m5265 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:10:22.682897Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m6194 [3mtrade_count[0m[2m=[0m5806 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:11:21.374940Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m6782 [3mtrade_count[0m[2m=[0m6218 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:12:31.483494Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m7483 [3mtrade_count[0m[2m=[0m6517 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:13:46.772242Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m8236 [3mtrade_count[0m[2m=[0m6764 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:14:31.396398Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m8682 [3mtrade_count[0m[2m=[0m7318 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:15:00.431352Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m8972 [3mtrade_count[0m[2m=[0m8028 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:16:03.272639Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m9601 [3mtrade_count[0m[2m=[0m8399 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:17:09.472006Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m10263 [3mtrade_count[0m[2m=[0m8737 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:18:06.773016Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m10836 [3mtrade_count[0m[2m=[0m9164 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:18:46.175428Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m11230 [3mtrade_count[0m[2m=[0m9770 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:19:28.879600Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m11657 [3mtrade_count[0m[2m=[0m10343 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:19:39.615025Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m11763 [3mtrade_count[0m[2m=[0m11237 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:20:04.580273Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m11980 [3mtrade_count[0m[2m=[0m12020 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:20:08.674059Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m12045 [3mtrade_count[0m[2m=[0m12955 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:20:18.485009Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m12057 [3mtrade_count[0m[2m=[0m13943 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:20:19.688544Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m12102 [3mtrade_count[0m[2m=[0m14898 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:20:26.614532Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m12131 [3mtrade_count[0m[2m=[0m15869 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:20:27.642846Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m12197 [3mtrade_count[0m[2m=[0m16803 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:20:36.389871Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m12331 [3mtrade_count[0m[2m=[0m17669 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:20:55.906524Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m12510 [3mtrade_count[0m[2m=[0m18490 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:21:02.623661Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m12586 [3mtrade_count[0m[2m=[0m19414 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:21:07.891806Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m12647 [3mtrade_count[0m[2m=[0m20353 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:21:22.057208Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m12788 [3mtrade_count[0m[2m=[0m21212 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:21:32.122039Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m12889 [3mtrade_count[0m[2m=[0m22111 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:21:43.977047Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m13008 [3mtrade_count[0m[2m=[0m22992 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:22:02.682286Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m13195 [3mtrade_count[0m[2m=[0m23805 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:22:30.357789Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m13471 [3mtrade_count[0m[2m=[0m24529 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:22:53.227746Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m13700 [3mtrade_count[0m[2m=[0m25300 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:23:09.544189Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m13863 [3mtrade_count[0m[2m=[0m26137 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:23:38.203527Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m14150 [3mtrade_count[0m[2m=[0m26850 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:23:53.882654Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m14307 [3mtrade_count[0m[2m=[0m27693 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:24:07.286342Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m14441 [3mtrade_count[0m[2m=[0m28559 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:24:35.271400Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m14721 [3mtrade_count[0m[2m=[0m29279 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:25:19.300386Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m15161 [3mtrade_count[0m[2m=[0m29839 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:25:46.371245Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m15432 [3mtrade_count[0m[2m=[0m30568 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:26:46.181811Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m16030 [3mtrade_count[0m[2m=[0m30970 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:26:58.961773Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m16157 [3mtrade_count[0m[2m=[0m31843 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:27:36.076012Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m16529 [3mtrade_count[0m[2m=[0m32471 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:28:04.846000Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m16816 [3mtrade_count[0m[2m=[0m33184 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:28:56.777764Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m17335 [3mtrade_count[0m[2m=[0m33665 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:29:17.971815Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m17548 [3mtrade_count[0m[2m=[0m34452 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:29:53.649219Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m17904 [3mtrade_count[0m[2m=[0m35096 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:30:18.228575Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m18150 [3mtrade_count[0m[2m=[0m35850 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:30:55.145961Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m18519 [3mtrade_count[0m[2m=[0m36481 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:31:29.271770Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m18861 [3mtrade_count[0m[2m=[0m37139 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:31:52.655577Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m19094 [3mtrade_count[0m[2m=[0m37906 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:32:18.571704Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m19354 [3mtrade_count[0m[2m=[0m38646 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:33:12.271166Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m19891 [3mtrade_count[0m[2m=[0m39109 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:33:45.101034Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m20219 [3mtrade_count[0m[2m=[0m39781 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:34:45.677014Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m20825 [3mtrade_count[0m[2m=[0m40175 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:35:04.971187Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m21018 [3mtrade_count[0m[2m=[0m40982 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:35:44.575067Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m21414 [3mtrade_count[0m[2m=[0m41586 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:36:22.672564Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m21795 [3mtrade_count[0m[2m=[0m42205 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:37:11.750986Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m22285 [3mtrade_count[0m[2m=[0m42715 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:38:01.495434Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m22783 [3mtrade_count[0m[2m=[0m43217 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:38:41.274663Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m23181 [3mtrade_count[0m[2m=[0m43819 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:39:10.272868Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m23470 [3mtrade_count[0m[2m=[0m44530 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:40:00.175887Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m23970 [3mtrade_count[0m[2m=[0m45030 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:40:36.873278Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m24337 [3mtrade_count[0m[2m=[0m45663 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:41:39.767647Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m24965 [3mtrade_count[0m[2m=[0m46035 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:41:55.860466Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m25126 [3mtrade_count[0m[2m=[0m46874 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:42:13.399155Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m25302 [3mtrade_count[0m[2m=[0m47698 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:42:23.020612Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m25398 [3mtrade_count[0m[2m=[0m48602 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:43:00.074739Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m25769 [3mtrade_count[0m[2m=[0m49231 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:43:35.573720Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m26124 [3mtrade_count[0m[2m=[0m49876 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:44:33.274719Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m26701 [3mtrade_count[0m[2m=[0m50299 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:45:19.675392Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m27165 [3mtrade_count[0m[2m=[0m50835 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:45:52.217665Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m27490 [3mtrade_count[0m[2m=[0m51510 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:46:36.265331Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m27930 [3mtrade_count[0m[2m=[0m52070 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:46:50.749409Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m28075 [3mtrade_count[0m[2m=[0m52925 [3mdrop_count[0m[2m=[0m0
+[2m2026-04-26T14:47:38.673643Z[0m [32m INFO[0m [2mfeed::ws[0m[2m:[0m feed stats [3mdepth_count[0m[2m=[0m28555 [3mtrade_count[0m[2m=[0m53445 [3mdrop_count[0m[2m=[0m0
